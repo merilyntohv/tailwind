@@ -520,6 +520,11 @@ video {
   grid-row: span 2 / span 2;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mt-20 {
   margin-top: 5rem;
 }
@@ -542,6 +547,10 @@ video {
 
 .aspect-square {
   aspect-ratio: 1 / 1;
+}
+
+.h-52 {
+  height: 13rem;
 }
 
 .h-8 {
@@ -613,6 +622,14 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-scroll {
+  overflow: scroll;
 }
 
 .overflow-x-auto {
@@ -776,44 +793,46 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.projectpagerules {
-  .projectpage {
-    display: grid;
-    grid-template-rows: 1fr 150px 1fr;
-    grid-template-areas: 
+.projectpage {
+  display: grid;
+  grid-template-rows: 1fr 150px 1fr;
+  grid-template-areas: 
            "image text3" 
            "image image2"
            "text2 image2";
-    gap: 40px;
-  }
-  .image {
-    grid-area: image;
-    min-width: 100%;
-    min-height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .text2 {
-    display: flex;
-    align-items: flex-end;
-    grid-area: text2;
-    text-align: right;
-    font-size: 20px;
-    font-weight: 300;
-  }
-  .image2 {
-    grid-area: image2;
-    min-width: 100%;
-    min-height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .text3 {
-    grid-area: text3;
-    text-align: left;
-    font-size: 20px;
-    font-weight: 300;
-  }
+  gap: 40px;
+}
+
+.image {
+  grid-area: image;
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.text2 {
+  display: flex;
+  align-items: flex-end;
+  grid-area: text2;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.image2 {
+  grid-area: image2;
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.text3 {
+  grid-area: text3;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 @media (min-width: 1024px) {
@@ -833,6 +852,10 @@ video {
     display: none;
   }
 
+  .lg\:h-full {
+    height: 100%;
+  }
+
   .lg\:w-full {
     width: 100%;
   }
@@ -845,8 +868,16 @@ video {
     align-items: center;
   }
 
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
   .lg\:justify-between {
     justify-content: space-between;
+  }
+
+  .lg\:gap-0 {
+    gap: 0px;
   }
 
   .lg\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
@@ -907,3 +938,4 @@ video {
     color: rgb(0 0 0 / var(--tw-text-opacity));
   }
 }
+
